@@ -1,75 +1,103 @@
-// Data Types📢
+// alert("Hello from Sheryians")
+// console.log("connected")
 
-// add comments
-// float
-// number
-// String
-// null
-// boolean
-// array
-// object
-// symbol - will learn when will see object in detail
-// undefined
-// NaN
-// Infinity
-// relative and primitive datatype in js.
+// var a="manish";
+// let b="sheryians";
+// const c= "school"
+// a="update";
+// b="update";
+// c="update";
+// console.log(a,b,c)
 
 
-// 📢 add comments :- double // kre ke lgate ise error kuch nhi ata hai.
-// Ex :-- hdhjjdjjdjdjjdjdjdjjdjdj  (but nor error).
-
-// float : -- 12.3 , 23.3%
-// number :-- 123- integer
-// string :- manih
-// null :-  jab apke apke pas koe value nhi hotaa dene ke liye to null use hota hai.
-// Ex:- let a=null
-// console.log(null); 
-// output :- null
-
-// boolean :- false,true
-
-// array : --  ek se jada value add krne ke liye hai.
-// Ex: --   [1,2,3,4];
-//    ["harsh", "shyam", "ravi"];
-//     [1,2,"harsh",true,{},[],class Animal {}]
-// Object :--  ek se jada properties ek bande ki hold krne ke liye hai.
-// object ek bande ki kai sari cheejo ke liye hota hai.
-            // Ex:-- just like information
-                //    {
-                //     name:"Manish",
-                //     age:23,
-                //     email: "harsh@email.com"
-                //    }
-// symbol :-  will learn when we will see objects in detail.
-
-// undefind :- jab koi variable banaya but usey koe value nhi di.
-// Ex:--
-        // var a;
-        // console.log(a)
-
-// Nan :- koe number ke sathh aisa operation kiya jo ho nhi skta hai.
-// Ex:-- jo possible n ho.
-// let a= "mans"*2;
+// {
+//     let a=10;
+// }
 // console.log(a)
-// output : Nan
+// var se bhar hm use kr skte but let se nhi
 
-// infinity :-  infinity
-//  let a= 1/0;
-//  console.log(a)
+// fix krne hai value ko
+// discount
+// days in year
+// days in month
+// mins in hour
 
-// relative and primitive datatype in js.
-// Ex:-- inki value ko direct copy nhi kr skte hai
-var a= [1,2,3,4];
-// or barket value ko iss trh se copy nhi kr skte hai
-// b me a ka copy nhi gya hai b me a refernce gya hai
-var b=a;
-b.pop()
-console.log(b)
-console.log(a)
-// b me change krne pr a me bhi change ho rha hai to hm inki real value ko change nhi kr skte hai.
 
-// reference vali value :--  array object function.
-// primitives - number booleans strings null undefined Nan infinity symbol BigInt
+// let name="manish";
+// let age=23;
+// let city="bhopal";
 
-// Primitives :- jinki value direct copy kr skte hai
-// reference - jinki value direct copy nhi kr skte hai
+// console.log(name)
+// console.info(age)
+// console.warn(city)
+
+// let nm=prompt("entr name")
+// alert(`welcome ${nm}`)
+// console.log(nm)
+
+
+// let name="manish";
+// let age=23;
+// console.log(typeof(name))
+// console.log(typeof(age))
+
+// let a=+prompt("enter");
+// console.log(typeof(a))
+
+// let msg="i love sheryians";
+// console.log(msg.slice(2,6))
+
+// let a="mansh"
+// console.log(a.split(``))
+
+// let msg= "i love sheryians";
+// console.log(msg.replace("love","study"))
+
+// let nm="manish"
+// console.log(`Hey ${nm} welcome`)
+
+// let msg="i love seri";
+// console.log(msg.includes("love"))
+
+// let expression= 5+10;
+// console.log(expression)
+
+// let y= (5+10)*2;
+// console.log(y)
+
+
+// let skills=["JS", "HTML"];
+// console.log(typeof(skills))
+
+// let user={city:"bhopal"}
+// console.log(typeof(user));
+
+// let x=null;
+// console.log(typeof(x))
+
+// let y;
+// console.log(typeof(y))
+
+// let z=Symbol("id")
+// console.log(typeof(z))
+
+
+// Spacial Values
+
+
+// console.log(1/0)
+// let infinity=infinity;
+// console.log(typeof(infinity))
+
+
+
+// Primitive v/s Reference
+// let x=5;
+// let y=x;
+// y=10
+// console.log(x,y)
+
+let obj1={name: "manish"}
+let obj2=obj1;
+obj2.name="sheryians";
+console.log(obj1.name)
