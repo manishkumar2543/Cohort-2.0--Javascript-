@@ -1,103 +1,105 @@
-// alert("Hello from Sheryians")
-// console.log("connected")
+// operators in js
+// Arithmetic operators📢
+// + ,- , * ,  /  , % ,**👈
+// 2+2
+// 2-2
+// 2*2
+// 2/2
+// 12%13
+// 2 ** 3
 
-// var a="manish";
-// let b="sheryians";
-// const c= "school"
-// a="update";
-// b="update";
-// c="update";
-// console.log(a,b,c)
 
-
-// {
-//     let a=10;
-// }
+// Assignment Operators📢
+//  = , += , -=, /= , %=
+// equal = value dene mein me use
+// let a=12;
+// += value ko particular se badhana
+// a+=13;
 // console.log(a)
-// var se bhar hm use kr skte but let se nhi
 
-// fix krne hai value ko
-// discount
-// days in year
-// days in month
-// mins in hour
+// let a= 10;
+// a-=5;
+// console.log(a)
+
+// let a=10;
+// a/=2;
+// console.log(a)
+
+// let a =12;
+// a %= 13;
+// console.log(a)
+
+// let a=10;
+// a *= 2;
+// console.log(a)
 
 
-// let name="manish";
-// let age=23;
-// let city="bhopal";
+// Comparison Operators📢
+//  == , ===, !=, !==, > , < , >= , <=
 
-// console.log(name)
-// console.info(age)
-// console.warn(city)
+// == not strict compare NEVER USE THIS
+// === strict compare ALAWAYS USE THIS
+// != NEVER USE THIS
+// !== ALWAYS USE THIS
 
-// let nm=prompt("entr name")
-// alert(`welcome ${nm}`)
+
+// Logical Operators 📢
+// && || !
+
+
+//  ture && true = true
+//  false && true = true
+//  true  && false = false
+//  false && false = false 
+
+// true || true = true
+// false || true = true
+// true  || false = true
+// false || false = false
+
+// Ternary Operator 📢
+// condition ? do this : doThat
+
+// 12 > 13 ? console.log("hey") : console.log("helo")
+// 122 > 13 ? console.log("hii"): console.log("hli")
+
+// Type checking operators 📢
+// typeof
+// instanceof
+
+// String operator 📢
+//  + (for concatenation)
+
+// let nm= "manish"+"kumar";
 // console.log(nm)
 
+// Spread / Rest operator 📢
+// ... (very important in modern js)
 
-// let name="manish";
-// let age=23;
-// console.log(typeof(name))
-// console.log(typeof(age))
+// spread ...
+// let arr=[1,2,3,4];
+// let arr2=[...arr];
+// console.log(arr2);
 
-// let a=+prompt("enter");
-// console.log(typeof(a))
+// Rest ...
+// function restoper(...rest){
+//     console.log(...rest)
+// }
+// console.log(restoper(12455))
 
-// let msg="i love sheryians";
-// console.log(msg.slice(2,6))
+// Nullish Coalescing operator 📢
+// ?? (fallback only when null / undefined)
 
-// let a="mansh"
-// console.log(a.split(``))
+// Optional Chaining
+// ?. (safe access to nested values)
 
-// let msg= "i love sheryians";
-// console.log(msg.replace("love","study"))
-
-// let nm="manish"
-// console.log(`Hey ${nm} welcome`)
-
-// let msg="i love seri";
-// console.log(msg.includes("love"))
-
-// let expression= 5+10;
-// console.log(expression)
-
-// let y= (5+10)*2;
-// console.log(y)
-
-
-// let skills=["JS", "HTML"];
-// console.log(typeof(skills))
-
-// let user={city:"bhopal"}
-// console.log(typeof(user));
-
-// let x=null;
-// console.log(typeof(x))
-
-// let y;
-// console.log(typeof(y))
-
-// let z=Symbol("id")
-// console.log(typeof(z))
-
-
-// Spacial Values
-
-
-// console.log(1/0)
-// let infinity=infinity;
-// console.log(typeof(infinity))
-
-
-
-// Primitive v/s Reference
-// let x=5;
-// let y=x;
-// y=10
-// console.log(x,y)
-
-let obj1={name: "manish"}
-let obj2=obj1;
-obj2.name="sheryians";
-console.log(obj1.name)
+// variable hoisting in js 📢
+// hoisting ka matlb hai ki variable ko bnane se pahle bhi use kiya ja skta hai
+// hoisting let ki sath work nhi krti
+// console.log(b)
+// var b=12;
+// hoisting me do hiso me variable tut jta hai 
+// delecretion
+// var b;
+// initialization
+// =12
