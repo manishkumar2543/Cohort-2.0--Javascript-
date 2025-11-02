@@ -1,105 +1,82 @@
-// operators in js
-// Arithmetic operators📢
-// + ,- , * ,  /  , % ,**👈
-// 2+2
-// 2-2
-// 2*2
-// 2/2
-// 12%13
-// 2 ** 3
-
-
-// Assignment Operators📢
-//  = , += , -=, /= , %=
-// equal = value dene mein me use
-// let a=12;
-// += value ko particular se badhana
-// a+=13;
-// console.log(a)
-
-// let a= 10;
-// a-=5;
-// console.log(a)
+// 1. Basic operators (Arithmetic, Assignment, Increment, Decrement,Comparison, Logical,Bitwise)
+// 1. create two number a=10 and b= 3
 
 // let a=10;
-// a/=2;
-// console.log(a)
+// let b=3;
+// console.log(a-b)
+// console.log(a+b);
+// console.log(a%b)
+// console.log(a*b)
+// console.log(a**b)
+// console.log(a/b)
 
-// let a =12;
-// a %= 13;
-// console.log(a)
+// 2.  Write let x=5 ; let x=x+3
+// let x=5;
+// x=x+3;
+// x+=3;
+// x-=3;
+// x*=3;
+// x/=3;
+// x**=3;
+// console.log(x)
 
-// let a=10;
-// a *= 2;
-// console.log(a)
+// 3. let count =5; Use count++ and log value before and after.
+// repeat for count-.
 
+// let count =5;
+// console.log(count);
+// // count++;
+// count --;
+// console.log(count)
 
-// Comparison Operators📢
-//  == , ===, !=, !==, > , < , >= , <=
+// 4. Compare two values: 5 == "5" and 5==="5". observe difference.
 
-// == not strict compare NEVER USE THIS
-// === strict compare ALAWAYS USE THIS
-// != NEVER USE THIS
-// !== ALWAYS USE THIS
+// 5. Check if 10 is greater than 5, less than 20, and equal to 10.
 
-
-// Logical Operators 📢
-// && || !
-
-
-//  ture && true = true
-//  false && true = true
-//  true  && false = false
-//  false && false = false 
-
-// true || true = true
-// false || true = true
-// true  || false = true
-// false || false = false
-
-// Ternary Operator 📢
-// condition ? do this : doThat
-
-// 12 > 13 ? console.log("hey") : console.log("helo")
-// 122 > 13 ? console.log("hii"): console.log("hli")
-
-// Type checking operators 📢
-// typeof
-// instanceof
-
-// String operator 📢
-//  + (for concatenation)
-
-// let nm= "manish"+"kumar";
-// console.log(nm)
-
-// Spread / Rest operator 📢
-// ... (very important in modern js)
-
-// spread ...
-// let arr=[1,2,3,4];
-// let arr2=[...arr];
-// console.log(arr2);
-
-// Rest ...
-// function restoper(...rest){
-//     console.log(...rest)
+// let x=10;
+// if(x>5 && x<20 && x===10 ){
+//     console.log("x is 10")
 // }
-// console.log(restoper(12455))
+// else {
+//     console.log("not")
+// }
 
-// Nullish Coalescing operator 📢
-// ?? (fallback only when null / undefined)
+// 6. Try logical AND and OR:
+// ture && false = false
+// false && ture =false
+// false && false =false
 
-// Optional Chaining
-// ?. (safe access to nested values)
+// true || false = true
+// false || true = true
+// true || true = true
 
-// variable hoisting in js 📢
-// hoisting ka matlb hai ki variable ko bnane se pahle bhi use kiya ja skta hai
-// hoisting let ki sath work nhi krti
-// console.log(b)
-// var b=12;
-// hoisting me do hiso me variable tut jta hai 
-// delecretion
-// var b;
-// initialization
-// =12
+// 7. Predict the result of :
+// (5 > 3 && 10 > 8) :- true
+// (5 > 3 || 10 < 8) :- true
+
+// 2.Variable Hoisting in Javascript.
+//  1. Predict output of:
+// console.log(a)
+// var a=12;
+
+// 2. Predict output of:
+// console.log(a)
+// let a=10;
+// error
+
+// 3. Predict output of:
+// test();
+// function test(){
+//     console.log("helo")
+// }
+
+
+// hello();
+// var hello=function(){
+//     console.logg("hi")
+// }
+
+// 5. Write one sentence:
+// What gets hoisted?
+// What does not get hoisted fully?
+
