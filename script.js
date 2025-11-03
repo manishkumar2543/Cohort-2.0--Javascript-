@@ -1,82 +1,109 @@
-// 1. Basic operators (Arithmetic, Assignment, Increment, Decrement,Comparison, Logical,Bitwise)
-// 1. create two number a=10 and b= 3
+// Loops & Conditionals in Javascript 📢
 
-// let a=10;
-// let b=3;
-// console.log(a-b)
-// console.log(a+b);
-// console.log(a%b)
-// console.log(a*b)
-// console.log(a**b)
-// console.log(a/b)
+// Understanding Condition operator in Javascript -[`if`, `else`, `else-if`, `Ternary operator`, `switch`]
+// `for` Loop in Javascript
+// `while` Loop in Javascript
+// `do...while` in Javascript
+// `forEach` in Javascript
+// `for of` Loop in Javascript
+// Recursion in Javascript
+// Loop control statements- [`break`, `continue`]
 
-// 2.  Write let x=5 ; let x=x+3
-// let x=5;
-// x=x+3;
-// x+=3;
-// x-=3;
-// x*=3;
-// x/=3;
-// x**=3;
-// console.log(x)
-
-// 3. let count =5; Use count++ and log value before and after.
-// repeat for count-.
-
-// let count =5;
-// console.log(count);
-// // count++;
-// count --;
-// console.log(count)
-
-// 4. Compare two values: 5 == "5" and 5==="5". observe difference.
-
-// 5. Check if 10 is greater than 5, less than 20, and equal to 10.
-
-// let x=10;
-// if(x>5 && x<20 && x===10 ){
-//     console.log("x is 10")
-// }
-// else {
-//     console.log("not")
-// }
-
-// 6. Try logical AND and OR:
-// ture && false = false
-// false && ture =false
-// false && false =false
-
-// true || false = true
-// false || true = true
-// true || true = true
-
-// 7. Predict the result of :
-// (5 > 3 && 10 > 8) :- true
-// (5 > 3 || 10 < 8) :- true
-
-// 2.Variable Hoisting in Javascript.
-//  1. Predict output of:
-// console.log(a)
-// var a=12;
-
-// 2. Predict output of:
-// console.log(a)
-// let a=10;
-// error
-
-// 3. Predict output of:
-// test();
-// function test(){
+// Conditionals👈👈
+// let a=1;
+// let a=12;
+// if(a>10){
 //     console.log("helo")
 // }
-
-
-// hello();
-// var hello=function(){
-//     console.logg("hi")
+// else{
+//     console.log("bye")
 // }
 
-// 5. Write one sentence:
-// What gets hoisted?
-// What does not get hoisted fully?
 
+// Truthy and falsy 👈
+// 0 "", false , NaN , null, undefined, document.all-> false
+// kuch bhi dikhe - >   true
+
+// true
+// if(12){
+//     console.log("hey")
+// }
+// else{
+//     console.log("bye")
+// }
+
+// false
+// if(0){
+//     console.log("hey")
+// }
+// else{
+//     console.log("by")
+// }
+
+// if-else, else-if👈
+// if(12>13){
+//     console.log("if chala")
+
+// }
+// else if(13>14){
+//     console.log("else if chlal")
+// }
+// else if(14>15){
+//     console.log("else if 2 chla")
+// }
+// else{
+//     console.log("else chala")
+// }
+
+
+// Ternary Operator👈👈
+// condition ? true : false
+
+// 12 > 13 ? console.log("hey") : console.log("helo")
+
+// switch👈
+
+// switch(1){
+//     case 1:
+//         console.log("hey");
+//         break;
+//     case 2:
+//         console.log("hey hey")
+//         break;
+//     case 3:
+//         console.log("hey hey hey")
+//         break;
+//     case 4:
+//         console.log("hey  hey hey hey")
+//         break;
+//     default:
+//         console.log("default case")
+// }
+
+
+// straightforward loops -> na hi value badalti hai na hi printing badalti hai
+
+// dynamic loop -> value badal skati hai and printing bhi badal skati hai
+
+// for loop👈🙌
+// for(start; end; change){
+    
+// }
+
+// for(let i =1; i<5; i++){
+//     console.log("Manish")
+// }
+
+// for(let i=50; i<101; i++){
+//     console.log(i)
+// }
+
+// for(let i=30; i>9; i-- ){
+//     console.log(i)
+// }
+
+// for(let i=12; i>0; i--){
+//     if(i===5 || i===7){}
+//     else console.log(i)
+    
+// }
