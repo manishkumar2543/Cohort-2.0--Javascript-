@@ -1,109 +1,94 @@
-// Loops & Conditionals in Javascript 📢
+// Level 1- Pure Beginner Practice
+// 1. Print number from 1 to 10.
+// Loop from 1 to 10 and print each number.
 
-// Understanding Condition operator in Javascript -[`if`, `else`, `else-if`, `Ternary operator`, `switch`]
-// `for` Loop in Javascript
-// `while` Loop in Javascript
-// `do...while` in Javascript
-// `forEach` in Javascript
-// `for of` Loop in Javascript
-// Recursion in Javascript
-// Loop control statements- [`break`, `continue`]
-
-// Conditionals👈👈
-// let a=1;
-// let a=12;
-// if(a>10){
-//     console.log("helo")
-// }
-// else{
-//     console.log("bye")
-// }
-
-
-// Truthy and falsy 👈
-// 0 "", false , NaN , null, undefined, document.all-> false
-// kuch bhi dikhe - >   true
-
-// true
-// if(12){
-//     console.log("hey")
-// }
-// else{
-//     console.log("bye")
-// }
-
-// false
-// if(0){
-//     console.log("hey")
-// }
-// else{
-//     console.log("by")
-// }
-
-// if-else, else-if👈
-// if(12>13){
-//     console.log("if chala")
-
-// }
-// else if(13>14){
-//     console.log("else if chlal")
-// }
-// else if(14>15){
-//     console.log("else if 2 chla")
-// }
-// else{
-//     console.log("else chala")
-// }
-
-
-// Ternary Operator👈👈
-// condition ? true : false
-
-// 12 > 13 ? console.log("hey") : console.log("helo")
-
-// switch👈
-
-// switch(1){
-//     case 1:
-//         console.log("hey");
-//         break;
-//     case 2:
-//         console.log("hey hey")
-//         break;
-//     case 3:
-//         console.log("hey hey hey")
-//         break;
-//     case 4:
-//         console.log("hey  hey hey hey")
-//         break;
-//     default:
-//         console.log("default case")
-// }
-
-
-// straightforward loops -> na hi value badalti hai na hi printing badalti hai
-
-// dynamic loop -> value badal skati hai and printing bhi badal skati hai
-
-// for loop👈🙌
-// for(start; end; change){
-    
-// }
-
-// for(let i =1; i<5; i++){
-//     console.log("Manish")
-// }
-
-// for(let i=50; i<101; i++){
+// for(let i=1; i<=10; i++){
 //     console.log(i)
 // }
 
-// for(let i=30; i>9; i-- ){
+// 2. Print only even number from  1 to 20
+// Use a loop and condition to print only even ones.
+
+// for(let i=1; i<=20; i++){
+//     if(i % 2 === 0){
+//         console.log(`${i} - even`)
+//     }
+// }
+
+// 3. Print number from 10 to 1
+// Reverse loop with a decrement.
+
+// for(let i=10; i>0; i--){
 //     console.log(i)
 // }
 
-// for(let i=12; i>0; i--){
-//     if(i===5 || i===7){}
-//     else console.log(i)
-    
+// 4. Print the word "Yes" 5 times repeat using a loop.
+// for(let i=1; i<=5; i++){
+//     console.log("Yes")
 // }
+
+// 5. Print whether numbers from 1 to 10 are even or odd for each number
+// check;
+
+// for(let i=1; i<=10; i++){
+//     if(i % 2 === 0){
+//         console.log(`${i}- even`);
+//     }
+//     else{
+//         console.log(`${i}-odd`)
+//     }
+// }
+
+
+// 6. Ask user for a number and say if it's positive or negative
+
+// let num= +prompt("enter number");
+// if(num>0){
+//     console.log("postive number")
+// }
+// else{
+//     console.log("negitive number")
+// }
+
+// 7. Ask users age check if eligible to vote 
+
+// let age=20;
+// let age=12;
+// if(age >= 18){
+//     console.log("Eligible");
+// }
+// else{
+//     console.log("not eligible")
+// }
+
+// trim() -  ye age or piche ka space hata ta hai
+
+// let age=prompt("age batao");
+// if(age === null){
+//     console.error("you cancelled it");
+
+// }
+// else{
+//     if(age.trim() === "");{
+//         console.error("bsdke dhang se likh le")
+//     }
+// }
+
+let age= prompt("age batao");
+if(age === null){
+    console.error("you cancelled it")
+}
+else{
+    if(age.trim() === ""){
+        console.error("bhai dhang se likhle..")
+    }
+    else{
+        age=Number(age.trim());
+        if(isNaN(age)){
+            console.error("bhai please number dede..")
+        }
+        else{
+            console.log("confirm ye number hai")
+        }
+    }
+}
