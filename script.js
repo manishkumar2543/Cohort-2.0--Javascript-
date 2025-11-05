@@ -1,94 +1,119 @@
-// Level 1- Pure Beginner Practice
-// 1. Print number from 1 to 10.
-// Loop from 1 to 10 and print each number.
-
-// for(let i=1; i<=10; i++){
-//     console.log(i)
+//  Level 1 - Pure Beginner Practice
+// 7. Ask users age and check if eligible to vote
+// let age=20;
+// if(age > 18){
+//     console.log("You can vote")
+// }
+// else{
+//     console.log("you can not vote")
 // }
 
-// 2. Print only even number from  1 to 20
-// Use a loop and condition to print only even ones.
+// 8. Print multiplication table of 5
 
-// for(let i=1; i<=20; i++){
-//     if(i % 2 === 0){
-//         console.log(`${i} - even`)
+// for(let i=1; i<=10; i++){
+//     console.log(`5 x ${i} = ${i*5}`)
+// }
+
+// 9. Count how many numbers between 1 and 15 are greater than 8
+// Loop and count conditionally.
+
+// let count=0;
+// for(let i=1; i<=15; i++){
+//     if(i > 8){
+//         count++;
+//        console.log(i)
 //     }
 // }
+// console.log(count)
 
-// 3. Print number from 10 to 1
-// Reverse loop with a decrement.
 
-// for(let i=10; i>0; i--){
-//     console.log(i)
+// 10. Ask user for password and print access status
+// Hardcoded correct password. Compare with user input.
+
+// let pss= prompt("dalo password");
+
+// let password="Hello";
+// if(pss=== password){
+//     console.log("correct password")
+// }
+// else{
+//     if(pss===null){
+//         console.error("likh to le")
+//     }
+//     if(pss.trim()===""){
+//         console.log("bakchodi mt kr")
+//     }
+//    else{
+//     console.log("not cooret")
+//    }
 // }
 
-// 4. Print the word "Yes" 5 times repeat using a loop.
-// for(let i=1; i<=5; i++){
-//     console.log("Yes")
+
+// let age=prompt("age btao");
+
+// if(age === null){
+//     console.log("you canncelled it.");
 // }
-
-// 5. Print whether numbers from 1 to 10 are even or odd for each number
-// check;
-
-// for(let i=1; i<=10; i++){
-//     if(i % 2 === 0){
-//         console.log(`${i}- even`);
+// else{
+//     if(age.trim()=== ""){
+//         console.error("please write something");
 //     }
 //     else{
-//         console.log(`${i}-odd`)
+//         age=Number(age);
+//         if(isNaN(age)){
+//             console.error("please enter number")
+//         }
+//         else{
+//             if(age < 0)  console.error("aamnaya age")
+//             else if(age >= 18) console.log("you can vote")
+//             else console.log("cant vote")
+            
+//         }
 //     }
 // }
 
 
-// 6. Ask user for a number and say if it's positive or negative
-
-// let num= +prompt("enter number");
-// if(num>0){
-//     console.log("postive number")
-// }
-// else{
-//     console.log("negitive number")
+//          While Loop  📢📢👈
+// syntex👈
+// start;
+// while(end){
+//  code.....
+//   change
 // }
 
-// 7. Ask users age check if eligible to vote 
-
-// let age=20;
-// let age=12;
-// if(age >= 18){
-//     console.log("Eligible");
-// }
-// else{
-//     console.log("not eligible")
+// let i=1; 
+// while(i<11){
+//     console.log("helo -",i)
+//     i++;
 // }
 
-// trim() -  ye age or piche ka space hata ta hai
-
-// let age=prompt("age batao");
-// if(age === null){
-//     console.error("you cancelled it");
-
-// }
-// else{
-//     if(age.trim() === "");{
-//         console.error("bsdke dhang se likh le")
-//     }
+// let pass=prompt("tum ps do");
+// while(pass !=="stop"){
+//     pass=prompt("tum ps do");
+//     console.log(pass)
 // }
 
-let age= prompt("age batao");
-if(age === null){
-    console.error("you cancelled it")
-}
-else{
-    if(age.trim() === ""){
-        console.error("bhai dhang se likhle..")
+// 11. Allow only 3 attempts to enter correct password if user gets
+// it right early, stop. if not "Account locked"
+
+let attempts=0;
+let khulgya=false;
+let pass="manish";
+
+
+let password=prompt("password btao");
+attempts++;
+
+if(password === pass) khulgya=true;
+
+while(password !== pass){
+    if(attempts === 3){
+        console.error("Account locked")
+         break;
     }
-    else{
-        age=Number(age.trim());
-        if(isNaN(age)){
-            console.error("bhai please number dede..")
-        }
-        else{
-            console.log("confirm ye number hai")
-        }
-    }
+   
+    password=prompt("password btao");
+    if(password === pass) khulgya=true;
+    attempts++;
 }
+if(khulgya === true) console.log("open accont")
