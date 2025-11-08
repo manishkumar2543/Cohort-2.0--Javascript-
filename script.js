@@ -1,104 +1,159 @@
-// 17. Print only first 3 odd number from 1 to 20 Use loop. 
-// stop with break after 3 odd prints.
 
-// let counter=0;
-// for(let i=1; i<=20; i++){
-//     if(counter === 3) break;
-//     if(i % 2 !==0){
-//         counter++;
-//         console.log(i)
-//     }
-    
+// Hoisting 📢
+
+
+
+// console.log(a);
+// var a=12;
+
+// but ye let ke sath possiable nhi error dikhayega
+// console.log(a)
+// let a=20;
+
+// - Parameters in Javascript - Destructured, rest, Dedault,📢📢
+
+// Destructured👈
+
+// function abc({name,age}){
+//     console.log(name,age)
 // }
-// console.log(`count=${counter}`)
+// abc({name:"manish",age:22,city:"siwan"})
 
-// 18. Ask user 5 number. Count how many are positive Use loop + condition + counter
+//  rest 👈
 
-// let count=0;
-// for(let i=1; i<=5; i++){
-//     let num= +prompt("enter number")
-//     if(num > 0){
-//         count++;
-//     }
+// function abc(...rest){
+//     console.log(rest)
 // }
-// console.log(count)
+// abc(1,2,3,4)
 
-
-// 19. ATM simulator - Allow 3 withdrawals start with 1000 blance. Ask withdrawal amoutn 3 times.
-// if enough balance - deduct
-// Else - print "Insufficient balance"
-
-// let blance=1000;
-// let amt= +prompt("amout btao");
-// if(blance >= amt){
-//     blance -= amt;
+// function abc(a,b,c,...rest){
+//     console.log(a,b,c,rest)
 // }
-// else{
-//     console.error("Insufficient balance")
-// }
-// console.log(blance)
+// abc(1,2,3,345678)
 
-// let balance=1000;
-// let counter=0;
-// let flag=false;
-// while(balance > 0 && counter !== 3){
-//     let withdraw= +prompt("kitna paisa withdraw karna hai");
-//     counter++;
-    
-//     if(withdraw <= balance) balance -=withdraw;
-//     else{
-//         flag=true;
-//         break;
-//     }
-    
+// Default 👈
+
+// function abc(a=10, b=0, c){
+//     console.log(a,b,c)
 // }
-// if(flag === true){
-//     console.log("inufficent balance")
-// }
-// console.log(`Balance: ${balance}`)
+// abc(100,200,300)
 
 
-// Recursion in Javascript📢
-//  ye khud under hi call krta hai
+// - Arguments in javascript - Positional, Default, spread;
+
+// Positional:- kuch n kuch value diya jata hai;
+// function abc(a,b,c,d){
+//     console.log(a,b,c,d);
+// }
+// abc(1,2,3,4)
+
+// spread 👈
+
+// function abc(a,b,c,d){
+//     console.log(a,b,c,d);
+// }
+// let arr=[1,2,3,4];
+// abc(...arr);
+
+// Classic function,Nested function, (function wihtin function), scope chain in js📢📢
+
+// Classic fnc 👈👈
 
 // function abc(){
-//     console.log("hey")
-//     abc();
+   
+//     function cda(){
+//         console.log("hey bro")
+//     }
+//     cda();
+// }
+// abc()
+
+
+// Scope Chain 👈👈
+
+// let a=10;
+// function abc(){
+//     let b=12;
+//     function def(){
+//         console.log(b)
+//     }
+//     def();
 // }
 // abc();
 
-// function abc(n){
-//     if(n === 0) return
-//     console.log(n)
-//     abc(n-1);
+
+// - Understanding Immediately Invoked function Expression(IIFE)📢📢
+
+// (function(){
+//     console.log("hey")
+// }) ();
+
+
+// - Arrow function, Fat Arrow, Anonymous , High order, callback, first Class , Pure fnc, Impure fnc;📢📢
+
+// Arrow Fnc 👈
+// syntax
+// ()=>{
+//     // code
 // }
-// abc(5)
+
+// ()=>{} ab ye fat arrow ek variable me save krnge
+// let fnc=()=>{
+//     console.log("Hey hey ehy")
+// };
+// fnc();
 
 
-// Loop control statements -[`break , continue`]
+// Anonymous :- jis function nam n ho👈
 
-// for(let i=1; i<=5; i++){
-//     if(i === 3){
-//         break;
-        
+// function (){
+
+// }
+
+// Higher Order Function :- ek aisa function jo ki return kr de ek or function👈👈👈
+// Woo function accept karle ek aur fnc parameter mein.
+
+
+// function abc(){
+//     let a=10;
+//     return function(){
+//         console.log(a)
 //     }
-//     console.log(i)
+// }
+// abc()()
+
+// Ya tooooo👈
+
+// function abc(a){
     
 // }
+// abc(function(){
+    
+// })
 
-// for(let i=1; i<=10; i++){
-//     if(i ===5 ){
-//         continue;
-//     }
-//     console.log(i)
+
+// CallBack function :-    📢📢
+
+// function abc(a){
+
 // }
+// abc(function(){
 
-// Function :- Mera code jab chlega tb jab bolenge tb chalega.
-// or main apne code jite bhar bhi chla skta hu.
+// })
 
-// function doSomething(name,age,email){
-//     console.log(name,age,email)
+
+// First Class Function :- isme hm fnc ko bhi value bna kr bhej skte hai as a varible📢📢📢
+
+// function abc(val){
+//     val();
 // }
-// doSomething("mansih",23, "meamnish@gmail.com")
+// abc(function(){
+//     console.log("First Class function")
+// })
 
+// function abc(a,b){
 
+// }
+// abc(function(){
+
+// },2)
