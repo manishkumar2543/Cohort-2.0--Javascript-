@@ -1,159 +1,178 @@
+// Pure function ek aisa function 📢
+// same input = same output
+// koe side effect nhi hoga
 
-// Hoisting 📢
-
-
-
-// console.log(a);
-// var a=12;
-
-// but ye let ke sath possiable nhi error dikhayega
-// console.log(a)
-// let a=20;
-
-// - Parameters in Javascript - Destructured, rest, Dedault,📢📢
-
-// Destructured👈
-
-// function abc({name,age}){
-//     console.log(name,age)
+// let a=12;
+// function abc(val){
+//     console.log(val+2)
 // }
-// abc({name:"manish",age:22,city:"siwan"})
+// abc(4)
 
-//  rest 👈
 
-// function abc(...rest){
-//     console.log(rest)
+// Impure function📢
+// same input = different  ouput ho skt hai 
+// koe na koe side effect ho skt hai
+
+// let a=12;
+// function abc(val){
+//     // console.log(Math.random() + val);
+//     a=Math.random() + val;
+//     console.log(a)
 // }
-// abc(1,2,3,4)
+// abc(12)
+// abc(12)
 
-// function abc(a,b,c,...rest){
-//     console.log(a,b,c,rest)
-// }
-// abc(1,2,3,345678)
+// Global scope 📢  ye pure code accessable krga
+// let a=12; 
 
-// Default 👈
-
-// function abc(a=10, b=0, c){
-//     console.log(a,b,c)
-// }
-// abc(100,200,300)
-
-
-// - Arguments in javascript - Positional, Default, spread;
-
-// Positional:- kuch n kuch value diya jata hai;
-// function abc(a,b,c,d){
-//     console.log(a,b,c,d);
-// }
-// abc(1,2,3,4)
-
-// spread 👈
-
-// function abc(a,b,c,d){
-//     console.log(a,b,c,d);
-// }
-// let arr=[1,2,3,4];
-// abc(...arr);
-
-// Classic function,Nested function, (function wihtin function), scope chain in js📢📢
-
-// Classic fnc 👈👈
+// Function scope 📢 ye apne function me access krega 
 
 // function abc(){
-   
-//     function cda(){
-//         console.log("hey bro")
-//     }
-//     cda();
-// }
-// abc()
-
-
-// Scope Chain 👈👈
-
-// let a=10;
-// function abc(){
-//     let b=12;
-//     function def(){
-//         console.log(b)
-//     }
-//     def();
-// }
-// abc();
-
-
-// - Understanding Immediately Invoked function Expression(IIFE)📢📢
-
-// (function(){
-//     console.log("hey")
-// }) ();
-
-
-// - Arrow function, Fat Arrow, Anonymous , High order, callback, first Class , Pure fnc, Impure fnc;📢📢
-
-// Arrow Fnc 👈
-// syntax
-// ()=>{
-//     // code
+//     let b=132;
 // }
 
-// ()=>{} ab ye fat arrow ek variable me save krnge
-// let fnc=()=>{
-//     console.log("Hey hey ehy")
-// };
-// fnc();
+// - Understanding `Closures` `scoping rule`
 
-
-// Anonymous :- jis function nam n ho👈
-
-// function (){
-
-// }
-
-// Higher Order Function :- ek aisa function jo ki return kr de ek or function👈👈👈
-// Woo function accept karle ek aur fnc parameter mein.
-
+// Closure :- ek function hai jo return krt hai function but returning function
+// jo hai wo parent function ka koe variable use karega.
 
 // function abc(){
-//     let a=10;
+//     let a=12;
 //     return function(){
 //         console.log(a)
 //     }
 // }
+
 // abc()()
 
-// Ya tooooo👈
+// closure > HOF ek hi hot hai💡
 
-// function abc(a){
-    
+
+// What are Arrays in javascript and how to Create and Array.
+
+// Array :- ek se jaada member rakhne ki jagh 
+
+// let arr= [1,2,3,4,5,6];
+// console.log(arr[2])
+
+
+// Hoe to Create Array 💡
+
+// let arr=[];
+// let arr2=new Array();
+// console.log(arr,arr2)
+
+// -Understand Hoe to Accessing Elements in Array.
+// let arr= [1,2,3,4,5];
+// console.log(arr[2])
+
+// funtion on Array - push, pop , shift, unshift, indexOf, arry destructuring, filter, some, map, reduce , spread operator , 
+// slice, reverse, sort, join , toString
+
+// let arr= [1,2,3,4,5];
+// arr.push(6);
+// console.log(arr)
+
+
+// Pop  💡
+
+// let arr= [1,2,3,4,5];
+// arr.pop();
+// console.log(arr)
+
+
+// shift - 💡
+
+// let arr= [1,2,3,4,5];
+// arr.shift();
+// console.log(arr)
+
+// unshift 💡
+// let arr=[1,2,3,4,5];
+// arr.unshift(0)
+// console.log(arr)
+
+
+// indexOf 💡
+// let arr=[1,2,3,4,5];
+// arr.indexOf(3)
+// console.log(arr)
+
+
+//  Array Destructuring 
+
+// let arr=[1,2,3,4,5];
+// let [a,b]=arr;
+// console.log(a,b)
+
+// let arr= [1,2,3,4,5];
+// let [a, ,b]=arr;
+// console.log(a,b);
+
+
+// filter 💡
+// let arr = [1,2,3,4,5];
+// let arr2 = arr.filter(function(val){
+//     return val < 3; 
+// })
+// console.log(arr2)
+
+
+// some , map , reduce  -> skip💡💡
+
+
+// spread operator 💡💡
+
+// let arr=[1,2,3,4,5];
+// let arr2=[...arr];
+// console.log(arr2)
+
+
+// - lterating Over Arrays using :- for Loop , forEach;
+
+// for Loop 
+
+// let arr = [1,2,3,4];
+// for(let i=0; i<4; i++){
+//     console.log(arr[i])
 // }
-// abc(function(){
-    
+
+// ForEach 💡
+
+// let arr=[1,2,3,4,5];
+// arr.forEach(function(val){
+//    console.log(val)
 // })
 
 
-// CallBack function :-    📢📢
+// -Understanding what are Objects in js
 
-// function abc(a){
+// let obj={
+//     name :"Manish",
+//     age:22,
+//     email: "manis@gmail.com"
 
+// };
+// console.log(obj)
+
+
+// Creating Objects, Accessing Properties, Deleting Property and Nested Objects.
+
+// let obj={
+//     name :"mansi",
+//     age:22,
 // }
-// abc(function(){
+// // Accessing Properties💡
+// // console.log(obj.name)
 
-// })
+// delete obj.name;
 
+// Nested Objects  💡
 
-// First Class Function :- isme hm fnc ko bhi value bna kr bhej skte hai as a varible📢📢📢
-
-// function abc(val){
-//     val();
-// }
-// abc(function(){
-//     console.log("First Class function")
-// })
-
-// function abc(a,b){
-
-// }
-// abc(function(){
-
-// },2)
+let obj={
+    name:"Manish",
+    socials:{
+        instagram: "djdhs",
+        Facebook:"ufjendkww",
+    }
+}
