@@ -1,106 +1,160 @@
-// Question Practices📢✍💡
+// 1. Write a higher-order function runTwice (fn) that takes another function and 
+// executes it two times.
 
-// 1. Write a function sayHello () that prints "Hello Javascript".
-// function sayHello(){
-//     console.log("Hello javascript")
+// function runTwice(fn){
+//     fn();
+//     fn();
+
 // }
-// sayHello()
+// runTwice(function(){
+//     console.log("helo")
+// })
 
-// 2. Create a function add(a,b) that returns their sum and log the result.
-//   function add(a,b){
-//     return a+b;
-//   }
-// let ans=add(1,2);
-// console.log(ans)
+//2. Create one pure function that always returns the same output for given input, and one impure
+// function using a global variable.
 
-// 3. Write a function with a default parameter name="Guest" that prints "Hi <name>".
+// pure fn
 
-// function def(name="Guest"){
-//     console.log(`Hii ${name}`)
+// function abcd(a,b){
+//     console.log(a+b)
 // }
-// def()
+// abcd(1,2);
 
-//4. Use rest parameters to make a function that adds unlimited number.
+// let global=0;
+// function impure(a){
+//     global++;
+//     console.log(a+global);
+// }
+// impure(2);
+// impure(2);
+
+
+// 3. Write a function that uses object destructuring inside parameters to extract and 
+// print name and age.
+
+// function abcd(obj){
+//     // console.log(obj)
+//     console.log(obj.name)
+// }
+// abcd({name:"mansh", age:12})
+
+// function abcd({name,age}){
+//     console.log(name,age)
+// }
+// abcd({name:"mansih",age:12})
+
+// 4. Demonstrate the difference between normal function and arrow function when used as object
+// methods (this issue).
  
-// function addUnlimited(...num){
-//     let sum=0; 
-//     for(let i=0; i<num.length; i++){
-//         sum+=num[i];
-//     }
-//     return sum
-// }
-// let result=addUnlimited(1,2,3)
-// console.log(result)
-
-// function addUnlimited(...nums){
-//     let sum=0;
-//     nums.forEach(function(val){
-//         sum+=val;
-//     })
-//     return sum
-// }
-// console.log(addUnlimited(1,2,3,4))
-
-// function addUnlimited(...nums){
-//     let ans= nums.reduce(function(acc,val){
-//         return acc+val
-//     },0)
-//     console.log(ans)
-// }
-// addUnlimited(1,2) 
-
-// function addUnlimited(...nums){
-//     let ans= nums.reduce(function(acc,val){
-//         return acc*val
-//     },1)
-//     console.log(ans)
-// }
-// addUnlimited(1,2,3) 
-
-
-// 5. Create an IIFE that prints "I run instantly!".
-
-// (function(){
-//     console.log("i run instantly")
-// })();
-
-// 6. Make a nested function where the inner one prints a variable from the outer one.
-
-// function parent(){
-//     let a=12; 
-//     function child(){
-//         console.log(a);
-//     }
-//     child();
-// }
-// parent();
-
-// 7. Create an array of 5 fruits. Add one at the end and remove one from the beginning.
-
-// let arr=["apple","grapes","banana"];
-// arr.push("pear");
-// arr.unshift("orange");
-// console.log(arr)
-
-//8. Use a for loop to print all elements of an array.
-
-// let arr=[1,2,3,4,5];
-// for(let i=0; i<arr.length; i++){
-//     console.log(arr[i]);
-// }
-
-// 9. Create an object person with keys name ,age ,city and print each keys value.
-
 // let obj={
-//     name:"Manish kumar",
-//     age:22,
-//     city:"Siwan"
-// }
-// for(let key in obj){
-//     console.log(obj[key])
-// }
+//     name:"manish",
+//     fnc: function(){
+//         console.log(this)
+//     },
+//     // agr hm obj me arrow fnc use krte hai window ka value ayega💡
+//     fnc2: () => {
+//         console.log(this)
+//     },
+// };
+// obj.fnc();
+// obj.fnc2();
 
-// 10. Use setTimeout() to log "Time up!" after 2 seconds
-// setTimeout(function(){
-//     console.log("Time's up")
-// },2000)
+
+// jab hm use krnge obj ke undr fnc ke fnc to arrow fnc ko aise use krnge 
+// let obj={
+//     name:"manish",
+//     // normal function ke undr hm arrwo fuction hi use krnge
+//     fnc: function (){
+//         let fnc2= ()=>{
+//             console.log(this)
+//         };
+//         fnc2();
+//     },
+// };
+// obj.fnc();
+// obj.fnc2();
+
+// 5. Given an array of number, use map() to create a new array where each
+// array where each number is squared.
+
+// let arr=[1,2,3,4];
+// let arr2=arr.map(function(val){
+//     return val * val
+// })
+// console.log(arr2)
+
+
+// 6. Use filter() to get only even numbers from an array.
+
+// let arr= [1,2,3,4,5,6,7,8,9];
+// let arr2=arr.filter(function(val){
+//     return val % 2===0;
+// })
+// console.log(arr2)
+
+// 
+
+// 7. Use reduce () to find the total salary from an array of number [1000,2000, 3000]
+
+// let salary=[1000,2000, 3000];
+// let total=salary.reduce(function(acc,val){
+//     return acc+val;
+// },0)
+// console.log(total)
+
+// 8. Create an array of names and use some() and every() to test a condition
+// (e.g., all names longer than 3 chars)
+
+// let names=["avi","harsh","nishi","sunil","sonu"];
+// let findNam=names.some(function(val){
+//     return val.length > 3;
+// })
+// console.log(findNam)
+
+// let names=["manish","sonu","aman"];
+// let findNam=names.every(function(val){
+//     return val.length > 5;
+// });
+// console.log(findNam);
+
+// Create an object user and test the behavior of object.
+// freeze() and Object.seal() by adding/changing keys.
+
+// let user={
+//     name:"manish",
+//     age:22,
+//     city:"Bhopal",
+// };
+
+// // ab mera user frezz ho chuka hai ab kam nhi krega change bhi ho skta hai💡
+// Object.freeze(user);
+// user.name="amaman"
+
+// seal Use💡
+// let user = {
+//     name:"Manish",
+//     age:22,
+    
+// };
+// Object.seal(user);
+// user.name="Aman kumar";
+
+
+
+// 9. Create a nested object (user-address- city) and access the city 
+// name inside it.
+// let obj={
+//     user: {
+//         name: "manish",
+//         address: {
+//             city: "siwan",
+//         },
+//     },
+// };
+// console.log(obj.user.address.city)
+
+
+// sort type 💡
+// let {city}=obj.user.address;
+// console.log(city)
+
